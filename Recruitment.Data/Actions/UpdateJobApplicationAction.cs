@@ -24,10 +24,10 @@ namespace Recruitment.Data.Actions
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "[dbo].[RP_UpdateJobApplication]";
             command.Parameters.Add(DataAcessUtils.CreateParam("@ApplicationId", DbType.Int32, _application.Id));
-            command.Parameters.Add(DataAcessUtils.CreateParam("@CandidateId", DbType.Int32, _application.CandidateId));
-            command.Parameters.Add(DataAcessUtils.CreateParam("@CandidateName", DbType.String, _application.CandidateName));
+            command.Parameters.Add(DataAcessUtils.CreateParam("@CandidateId", DbType.Int32, _application.ApplicantId));
+            command.Parameters.Add(DataAcessUtils.CreateParam("@CandidateName", DbType.String, _application.ApplicantName));
             command.Parameters.Add(DataAcessUtils.CreateParam("@State", DbType.String, _application.CurrentState));
-            command.Parameters.Add(DataAcessUtils.CreateParam("@WorkflowId", DbType.String, _application.WorkflowId));
+            command.Parameters.Add(DataAcessUtils.CreateParam("@WorkflowId", DbType.Int32, _application.WorkflowId));
             command.ExecuteNonQuery();
             return true;
         }
