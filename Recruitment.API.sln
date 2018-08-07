@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruitment.Core", "Recruit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruitment.Data", "Recruitment.Data\Recruitment.Data.csproj", "{694D396A-9C8F-499C-B10D-2CFE63472DF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruitment.BusinessLogic", "Recruitment.BusinessLogic\Recruitment.BusinessLogic.csproj", "{4AF06C39-A683-4DE8-A748-0D421FF2AC10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruitment.BusinessLogic", "Recruitment.BusinessLogic\Recruitment.BusinessLogic.csproj", "{4AF06C39-A683-4DE8-A748-0D421FF2AC10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
