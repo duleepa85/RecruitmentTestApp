@@ -17,5 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
 Download the project and run the two scripts which are inside the "Scripts" folder in SQL Server Management studio. 
 Then open the project from VS and change the connection string property which is in appsettings.json file.
 
+# Limitations
+Frontend is not implemented.
 
 
