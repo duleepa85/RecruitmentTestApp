@@ -11,5 +11,6 @@ namespace Recruitment.Core.DomainObjects
         public string ApplicantName { get; set; }
         public string CurrentState { get; set; }
         public int WorkflowId { get; set; }
+        public string WorkflowSequence { get; set; }
     }
 }

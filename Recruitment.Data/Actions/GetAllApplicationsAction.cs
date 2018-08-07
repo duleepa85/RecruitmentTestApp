@@ -26,8 +26,10 @@ namespace Recruitment.Data.Actions
                 while (reader.Read())
                 {
                     RPApplication app = new RPApplication();
+                    app.Id = reader.GetInt32("ApplicationId");
                     app.ApplicantName = reader.GetString("ApplicantName");
                     app.CurrentState = reader.GetString("CurrentState");
+                    app.WorkflowSequence = reader.GetString("WorkflowSequence");
                     applications.Add(app);
                 }
                 return applications;

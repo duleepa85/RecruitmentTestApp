@@ -28,8 +28,18 @@ namespace Recruitment.Data.Actions
             command.Parameters.Add(DataAcessUtils.CreateParam("@CandidateName", DbType.String, _application.ApplicantName));
             command.Parameters.Add(DataAcessUtils.CreateParam("@State", DbType.String, _application.CurrentState));
             command.Parameters.Add(DataAcessUtils.CreateParam("@WorkflowId", DbType.Int32, _application.WorkflowId));
+            DbParameter para1 = new SqlParameter();
+            para1.DbType = DbType.Int32;
+            para1.ParameterName = "@outPutID";
+            para1.Direction = ParameterDirection.Output;
+            command.Parameters.Add(para1);
             command.ExecuteNonQuery();
-            return true;
+            int result = Convert.ToInt32(para1.Value);
+            if (result > 0)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
